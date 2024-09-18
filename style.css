@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* About Section */
+#about {
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tech-stack span {
+    background-color: #ff6347;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Project Section */
+#projects {
+    padding: 5rem 2rem;
+    background-color: #fff;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
+    width: 45%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project h3 {
+    padding: 1rem;
+}
+
+.project p {
+    padding: 0 1rem;
+}
+
+.service {
+    margin: 2rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
